@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				form.reset();
 				form.classList.remove('_sending');
 			}else {
-				alert('Письмо отправлено');
+				alert('Регистрация прошла успешно');
 				form.reset();
 				form.classList.remove('_sending');
 			}
