@@ -10,6 +10,12 @@
 	$mail->setLanguage('ru', 'phpmailer/language/');
 	$mail->IsHTML(true);
 
+	$mail->setFrom('pel6men6@mail.ru', 'Oleg');
+	$mail->addAddress('pel6men6.oleg@gmail.com');
+	$mail->Subject = 'Hello'
+
+	$body = '<h1>AAAAAAAA</h1>'
+
 	if (!$mail->send()){
 		$message = 'Error'
 	}else {
