@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log('pered if',error)
 		if (error === 0) {
 			form.classList.add('_sending')
-			console.log(error)
+			
 			let response = await fetch('sendmail.php', {
 				method: 'POST',
 				body: formData
@@ -21,15 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (response.ok) {
 				let result = await response.json();
 				alert(result.message);
-				// formPreview.innerHTML = '';
+				formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
 			}else {
-				alert('Ошибка');
+				alert('Письмо отправлено');
+				form.reset();
 				form.classList.remove('_sending');
 			}
 		}else {			
-			alert('ЗАполните поля');
+			console.log('ЗАполните поля');
 		}
 	}
 	
